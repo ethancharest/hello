@@ -1,0 +1,13 @@
+services:
+  go_app:
+    build:
+      context: ./docker/
+      tags:
+        - "ethancharest/go_server:latest"
+    container_name: go_app
+    image: ethancharest/go_server:latest
+    restart: always
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
